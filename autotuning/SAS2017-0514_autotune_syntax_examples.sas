@@ -5,12 +5,14 @@ cas mysess sessopts=(nworkers=1);
 /* you will need to define it explicitly by running the following command: */
 /* libname sampsio '!sasroot/samples/samplesml'; */
 
-libname mycaslib sasioca casref=mysess;
+libname mycaslib cas casref=mysess;
+
 
 /* Load data */
 data mycaslib.dmagecr;
     set sampsio.dmagecr;
 run;
+
 
 /* Default tuning of gradboost model - autotune statement with no options. 
    The following hyperparameters are tuned:        
@@ -30,6 +32,7 @@ proc gradboost data=mycaslib.dmagecr outmodel=mycaslib.mymodel;
     autotune;
 run;
 
+
 /* Tuning of gradboost model with only 3 iterations of up to 5 evaluations each and */
 /* average square error tuning objective. */
 proc gradboost data=mycaslib.dmagecr outmodel=mycaslib.mymodel;
@@ -40,6 +43,7 @@ proc gradboost data=mycaslib.dmagecr outmodel=mycaslib.mymodel;
     input purpose / level=nominal;
     autotune popsize=5 maxiter=3 objective=ASE;
 run;
+
 
 /* Tuning of gradboost model with modified range for ntrees and values list */
 /* for vars_to_try.  All other hyperparameters are included as listed above. */
@@ -55,6 +59,7 @@ proc gradboost data=mycaslib.dmagecr outmodel=mycaslib.mymodel;
             vars_to_try(values=4 8 12 16 20 init=4)
         );
 run;
+
 
 /* Close session */
 cas mysess terminate;
