@@ -16,13 +16,13 @@ limitations under the License.
 
 ## Discussion
 
-**Note:** SAS Cloud Analytic Services (CAS) is the engine and associated cloud services in SAS Viya. To run the code in the following examples, you need to have a CAS server readily available.
+**Note:** SAS Cloud Analytic Services (CAS) is the execution engine and associated cloud services in SAS Viya. To run the code in the following examples, you need to have a CAS server readily available.
 
 ### The ORL Database of Faces 
 
 http://www.cl.cam.ac.uk/research/dtg/attarchive/facesataglance.html
 
-There are ten different images of each of 40 distinct subjects. For some subjects, the images were taken at different times, varying the lighting, facial expressions (open / closed eyes, smiling / not smiling) and facial details (glasses / no glasses). All the images were taken against a dark homogeneous background with the subjects in an upright, frontal position (with tolerance for some side movement). The files are in PGM format.
+The image files are provided here in the att_faces.zip file; unzip that file to a directory named "att_faces". There are ten different images of each of 40 distinct subjects. For some subjects, the images were taken at different times, varying the lighting, facial expressions (open / closed eyes, smiling / not smiling) and facial details (glasses / no glasses). All the images were taken against a dark homogeneous background with the subjects in an upright, frontal position (with tolerance for some side movement). The files are in PGM format.
 
 ### NNET1_origData.ipynb
 
