@@ -13,9 +13,11 @@
 <div class=WordSection1>
 
 <p class=MsoNormal>The bank data set contain more than 1
-million rows (or observations) and 24 columns (or variables). Three target
+million rows (or observations) and 24 otiginal columns (or variables). Three target
 variables are provided, but the primary focus is on the binary target (<b>B_TGT</b>,
-see below).</p>
+see below). In the "prepped" version of the data set provided here, a number of columns have been added
+from data preparation steps, including imputation (<b>i_</b>) and log transformation after imputation(<b>logi_</b>). A partition
+indicator variable (<b>_PartInd_</b>) has also been added to indicate observations to use for training (1, 30%) and validation (0, 70%).</p>
 
 <p class=MsoNormal>The <b>bank </b> data set consists of observations
 taken on a large financial services firm's accounts. Accounts in the data
