@@ -254,7 +254,7 @@ data all_rocinfo;
       SVM_rocinfo(keep=sensitivity fpr c _partind_ in=s where=(_partind_=0))
       VAGBM_rocinfo(keep=sensitivity fpr c _partind_ in=v where=(_partind_=0));
       
-  length model $ 16;
+  length model $ 20;
   select;
     when (s) model='SVM';
     when (f) model='Forest';
@@ -269,7 +269,7 @@ data all_liftinfo;
       TREE_liftinfo(keep=depth lift cumlift _partind_ in=t where=(_partind_=0))
       VAGBM_liftinfo(keep=depth lift cumlift _partind_ in=v where=(_partind_=0));
       
-  length model $ 16;
+  length model $ 20;
   select;
     when (s) model='SVM';
     when (f) model='Forest';
@@ -284,7 +284,7 @@ data all_fitstatinfo;
       TREE_fitstat(keep=MCE _partind_ in=t where=(_partind_=0))
       VAGBM_fitstat(keep=MCE _partind_ in=v where=(_partind_=0));
       
-  length model $ 16;
+  length model $ 20;
   select;
     when (s) model='SVM';
     when (f) model='Forest';
