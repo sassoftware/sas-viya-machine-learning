@@ -156,6 +156,10 @@ quit;
 /************************************************************************/
 /* SUPPORT VECTOR MACHINE predictive model                              */
 /************************************************************************/
+proc casutil;
+   droptable casdata="svm_astore_model" incaslib="&caslib" quiet;
+run;
+
 proc svmachine data=&prepped_data. (where=(_partind_=1));
   kernel polynom / deg=2;
   target &target. ;
