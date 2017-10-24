@@ -12,17 +12,17 @@
 
 <div class=WordSection1>
 
-<p class=MsoNormal>The data sets used in these examples contain more than 1
-million rows (or observations) and 24 columns (or variables). Three target
+<p class=MsoNormal>The bank data set contain more than 1
+million rows (or observations) and 24 otiginal columns (or variables). Three target
 variables are provided, but the primary focus is on the binary target (<b>B_TGT</b>,
-see below).</p>
+see below). In the "prepped" version of the data set provided here, a number of columns have been added
+from data preparation steps, including imputation (<b>i_</b>) and log transformation after imputation(<b>logi_</b>). A partition
+indicator variable (<b>_PartInd_</b>) has also been added to indicate observations to use for training (1, 30%) and validation (0, 70%).</p>
 
-<p class=MsoNormal>The data sets <b>bank </b>and<b> bankraw</b> consist of observations
+<p class=MsoNormal>The <b>bank </b> data set consists of observations
 taken on a large financial services firm's accounts. Accounts in the data
 represent consumers of home equity lines of credit, automobile loans, and other
-types of short- to medium-term credit instruments. The <b>bankraw</b> data set
-is the original data in its raw form; the <b>bank</b> data set is the resulting
-data set after applying appropriate data cleansing.</p>
+types of short- to medium-term credit instruments.</p>
 
 <p class=MsoNormal>The data have been anonymized and transformed to conform to
 the following description: <br>
@@ -32,9 +32,7 @@ motivate the contracting (purchase) of the bank's financial services products.
 Campaign promotions are categorized into <i>direct </i>and <i>indirect</i>.
 Direct promotions consist of sales offers to a particular account that involve
 an incentive. Indirect promotions are marketing efforts that do not involve an
-incentive. Note, transformed and modified, modeling ready, versions of some
-demographic variables and all the interval valued inputs are also provided in
-the <b>bank</b> data. </p>
+incentive.</p>
 
 <p class=MsoNormal>In addition to the account identifier (<b>Account ID</b>),
 the following variables are in the data set:</p>
