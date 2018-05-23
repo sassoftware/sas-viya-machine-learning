@@ -13,7 +13,7 @@
 <div class=WordSection1>
 
 <p class=MsoNormal>The bank data set contain more than 1
-million rows (or observations) and 24 otiginal columns (or variables). Three target
+million rows (or observations) and 24 original columns (or variables). Three target
 variables are provided, but the primary focus is on the binary target (<b>B_TGT</b>,
 see below). In the "prepped" version of the data set provided here, a number of columns have been added
 from data preparation steps, including imputation (<b>i_</b>) and log transformation after imputation(<b>logi_</b>). A partition
