@@ -1,0 +1,1 @@
+One of the key questions a data scientist asks when interpreting a predictive model is “How do the model inputs work?” This folder contains material for employing techniques such as partial dependence plots, ICE plots, LIME, and surrogate models to help understand the predictions provided by complex machine learning models.
