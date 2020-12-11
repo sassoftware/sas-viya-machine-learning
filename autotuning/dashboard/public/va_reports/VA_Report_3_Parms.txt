@@ -1,0 +1,3394 @@
+{
+   "@element": "SASReport",
+   "xmlns": "http://www.sas.com/sasreportmodel/bird-4.2.4",
+   "label": "VA_Report_3_Parms",
+   "dateCreated": "2020-01-28T02:12:58Z",
+   "createdApplicationName": "SAS Visual Analytics 8.5",
+   "dateModified": "2020-01-29T19:08:20.204Z",
+   "lastModifiedApplicationName": "SAS Visual Analytics 8.5",
+   "createdVersion": "4.2.4",
+   "createdLocale": "en",
+   "nextUniqueNameIndex": 260,
+   "refresh": "fixed",
+   "refreshRate": 2,
+   "dataDefinitions": [
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd19",
+         "businessItems": [
+            {
+               "name": "bi192",
+               "base": "bi184",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi193",
+               "base": "bi181",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi194",
+               "base": "bi182",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi195",
+               "base": "bi185",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi196",
+               "base": "bi186",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi197",
+               "base": "bi187",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi198",
+               "base": "bi188",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd20",
+               "type": "relational",
+               "relationalQueryList": [
+                  {
+                     "sortItems": [
+                        {
+                           "sortDirection": "ascending",
+                           "@element": "SortItem",
+                           "reference": "bi193"
+                        }
+                     ],
+                     "detail": true,
+                     "axes": [
+                        {
+                           "@element": "Query_Axis",
+                           "type": "column",
+                           "itemList": [
+                              "bi193",
+                              "bi192",
+                              "bi197",
+                              "bi198",
+                              "bi195",
+                              "bi196",
+                              "bi194"
+                           ]
+                        }
+                     ],
+                     "@element": "RelationalQuery"
+                  }
+               ],
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd21",
+                     "purpose": "primary",
+                     "maxRowsBehavior": "truncate",
+                     "maxRowsLookup": "listTable"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd30",
+         "businessItems": [
+            {
+               "name": "bi199",
+               "base": "bi181",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi200",
+               "base": "bi186",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi201",
+               "base": "bi184",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd31",
+               "type": "relational",
+               "relationalQueryList": [
+                  {
+                     "sortItems": [
+                        {
+                           "sortDirection": "ascending",
+                           "@element": "SortItem",
+                           "reference": "bi201"
+                        }
+                     ],
+                     "detail": true,
+                     "axes": [
+                        {
+                           "@element": "Query_Axis",
+                           "type": "column",
+                           "itemList": [
+                              "bi199",
+                              "bi200",
+                              "bi201"
+                           ]
+                        }
+                     ],
+                     "@element": "RelationalQuery"
+                  }
+               ],
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd32",
+                     "purpose": "primary",
+                     "maxRowsBehavior": "noData",
+                     "maxRowsLookup": "scatter"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd39",
+         "businessItems": [
+            {
+               "name": "bi42",
+               "@element": "SyntheticDataItem"
+            },
+            {
+               "@element": "SyntheticItems",
+               "name": "si44",
+               "items": [
+                  {
+                     "name": "bi45",
+                     "@element": "Item",
+                     "purpose": "variableName"
+                  },
+                  {
+                     "name": "bi46",
+                     "@element": "Item",
+                     "purpose": "lowerBound"
+                  },
+                  {
+                     "name": "bi47",
+                     "@element": "Item",
+                     "purpose": "binWidth"
+                  },
+                  {
+                     "name": "bi48",
+                     "@element": "Item",
+                     "purpose": "binCount"
+                  }
+               ]
+            },
+            {
+               "@element": "SyntheticItems",
+               "name": "si49",
+               "items": [
+                  {
+                     "name": "bi50",
+                     "@element": "Item",
+                     "purpose": "polylineCount"
+                  },
+                  {
+                     "name": "bi51",
+                     "@element": "Item",
+                     "purpose": "polylineCountLabel"
+                  }
+               ]
+            },
+            {
+               "name": "bi202",
+               "base": "bi182",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi203",
+               "base": "bi185",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi204",
+               "base": "bi186",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi205",
+               "base": "bi187",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi206",
+               "base": "bi188",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd40",
+               "type": "procedural",
+               "proceduralQuery": {
+                  "@element": "ProceduralQuery",
+                  "type": "parallelCoordinates",
+                  "scoreCodeNumber": 41,
+                  "arguments": [
+                     {
+                        "@element": "ListArgument",
+                        "purpose": "variables",
+                        "argumentValueList": [
+                           {
+                              "@element": "ArgumentGroup",
+                              "group": "variableGroup",
+                              "argumentList": [
+                                 {
+                                    "@element": "Argument",
+                                    "purpose": "variable",
+                                    "argumentValue": {
+                                       "@element": "ReferenceValue",
+                                       "value": "bi205"
+                                    }
+                                 },
+                                 {
+                                    "@element": "Argument",
+                                    "purpose": "binCount",
+                                    "argumentValue": {
+                                       "@element": "IntValue",
+                                       "value": 10
+                                    }
+                                 }
+                              ]
+                           },
+                           {
+                              "@element": "ArgumentGroup",
+                              "group": "variableGroup",
+                              "argumentList": [
+                                 {
+                                    "@element": "Argument",
+                                    "purpose": "variable",
+                                    "argumentValue": {
+                                       "@element": "ReferenceValue",
+                                       "value": "bi206"
+                                    }
+                                 },
+                                 {
+                                    "@element": "Argument",
+                                    "purpose": "binCount",
+                                    "argumentValue": {
+                                       "@element": "IntValue",
+                                       "value": 10
+                                    }
+                                 }
+                              ]
+                           },
+                           {
+                              "@element": "ArgumentGroup",
+                              "group": "variableGroup",
+                              "argumentList": [
+                                 {
+                                    "@element": "Argument",
+                                    "purpose": "variable",
+                                    "argumentValue": {
+                                       "@element": "ReferenceValue",
+                                       "value": "bi203"
+                                    }
+                                 },
+                                 {
+                                    "@element": "Argument",
+                                    "purpose": "binCount",
+                                    "argumentValue": {
+                                       "@element": "IntValue",
+                                       "value": 10
+                                    }
+                                 }
+                              ]
+                           },
+                           {
+                              "@element": "ArgumentGroup",
+                              "group": "variableGroup",
+                              "argumentList": [
+                                 {
+                                    "@element": "Argument",
+                                    "purpose": "variable",
+                                    "argumentValue": {
+                                       "@element": "ReferenceValue",
+                                       "value": "bi202"
+                                    }
+                                 },
+                                 {
+                                    "@element": "Argument",
+                                    "purpose": "binCount",
+                                    "argumentValue": {
+                                       "@element": "IntValue",
+                                       "value": 10
+                                    }
+                                 }
+                              ]
+                           },
+                           {
+                              "@element": "ArgumentGroup",
+                              "group": "variableGroup",
+                              "argumentList": [
+                                 {
+                                    "@element": "Argument",
+                                    "purpose": "variable",
+                                    "argumentValue": {
+                                       "@element": "ReferenceValue",
+                                       "value": "bi204"
+                                    }
+                                 },
+                                 {
+                                    "@element": "Argument",
+                                    "purpose": "binCount",
+                                    "argumentValue": {
+                                       "@element": "IntValue",
+                                       "value": 10
+                                    }
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "binCount",
+                        "argumentValue": {
+                           "@element": "IntValue",
+                           "value": 10
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "maxPolylines",
+                        "argumentValue": {
+                           "@element": "IntValue",
+                           "value": 3000
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "totalCount",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi42"
+                        }
+                     }
+                  ]
+               },
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd52",
+                     "purpose": "primary"
+                  },
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd53",
+                     "purpose": "variableOutputInfo",
+                     "syntheticItemsList": [
+                        "si44"
+                     ]
+                  },
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd54",
+                     "purpose": "outputInfo",
+                     "syntheticItemsList": [
+                        "si49"
+                     ]
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd62",
+         "businessItems": [
+            {
+               "name": "bi207",
+               "base": "bi181",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi208",
+               "base": "bi187",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi209",
+               "base": "bi184",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd63",
+               "type": "relational",
+               "relationalQueryList": [
+                  {
+                     "sortItems": [
+                        {
+                           "sortDirection": "ascending",
+                           "@element": "SortItem",
+                           "reference": "bi209"
+                        }
+                     ],
+                     "detail": true,
+                     "axes": [
+                        {
+                           "@element": "Query_Axis",
+                           "type": "column",
+                           "itemList": [
+                              "bi207",
+                              "bi208",
+                              "bi209"
+                           ]
+                        }
+                     ],
+                     "@element": "RelationalQuery"
+                  }
+               ],
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd64",
+                     "purpose": "primary",
+                     "maxRowsBehavior": "noData",
+                     "maxRowsLookup": "scatter"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd71",
+         "businessItems": [
+            {
+               "name": "bi257",
+               "base": "bi181",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi258",
+               "base": "bi182",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi259",
+               "base": "bi184",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd72",
+               "type": "relational",
+               "relationalQueryList": [
+                  {
+                     "sortItems": [
+                        {
+                           "sortDirection": "ascending",
+                           "@element": "SortItem",
+                           "reference": "bi259"
+                        }
+                     ],
+                     "detail": true,
+                     "axes": [
+                        {
+                           "@element": "Query_Axis",
+                           "type": "column",
+                           "itemList": [
+                              "bi257",
+                              "bi258",
+                              "bi259"
+                           ]
+                        }
+                     ],
+                     "@element": "RelationalQuery"
+                  }
+               ],
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd73",
+                     "purpose": "primary",
+                     "maxRowsBehavior": "noData",
+                     "maxRowsLookup": "scatter"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd85",
+         "businessItems": [
+            {
+               "name": "bi223",
+               "base": "bi187",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi224",
+               "base": "bi186",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd86",
+               "type": "relational",
+               "relationalQueryList": [
+                  {
+                     "detail": true,
+                     "axes": [
+                        {
+                           "@element": "Query_Axis",
+                           "type": "column",
+                           "itemList": [
+                              "bi223",
+                              "bi224"
+                           ]
+                        }
+                     ],
+                     "@element": "RelationalQuery"
+                  }
+               ],
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd87",
+                     "purpose": "primary",
+                     "maxRowsBehavior": "noData",
+                     "maxRowsLookup": "scatter"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd95",
+         "businessItems": [
+            {
+               "name": "bi236",
+               "base": "bi187",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi237",
+               "@element": "SyntheticDataItem"
+            },
+            {
+               "name": "bi238",
+               "@element": "SyntheticDataItem"
+            },
+            {
+               "name": "bi239",
+               "base": "bi189",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd96",
+               "type": "procedural",
+               "proceduralQuery": {
+                  "@element": "ProceduralQuery",
+                  "type": "histogram",
+                  "arguments": [
+                     {
+                        "@element": "Argument",
+                        "purpose": "binType",
+                        "argumentValue": {
+                           "@element": "StringValue",
+                           "value": "defaultBinEdges"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "inputVariable",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi236"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "lowerBound",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi237"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "upperBound",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi238"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "aggregatedMeasure",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi239"
+                        }
+                     }
+                  ]
+               },
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd97",
+                     "purpose": "primary"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd135",
+         "businessItems": [
+            {
+               "name": "bi210",
+               "base": "bi181",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi211",
+               "base": "bi188",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi212",
+               "base": "bi184",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd136",
+               "type": "relational",
+               "relationalQueryList": [
+                  {
+                     "sortItems": [
+                        {
+                           "sortDirection": "ascending",
+                           "@element": "SortItem",
+                           "reference": "bi212"
+                        }
+                     ],
+                     "detail": true,
+                     "axes": [
+                        {
+                           "@element": "Query_Axis",
+                           "type": "column",
+                           "itemList": [
+                              "bi210",
+                              "bi211",
+                              "bi212"
+                           ]
+                        }
+                     ],
+                     "@element": "RelationalQuery"
+                  }
+               ],
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd131",
+                     "purpose": "primary",
+                     "maxRowsBehavior": "noData",
+                     "maxRowsLookup": "scatter"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd148",
+         "businessItems": [
+            {
+               "name": "bi225",
+               "base": "bi188",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi226",
+               "base": "bi186",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd149",
+               "type": "relational",
+               "relationalQueryList": [
+                  {
+                     "detail": true,
+                     "axes": [
+                        {
+                           "@element": "Query_Axis",
+                           "type": "column",
+                           "itemList": [
+                              "bi225",
+                              "bi226"
+                           ]
+                        }
+                     ],
+                     "@element": "RelationalQuery"
+                  }
+               ],
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd145",
+                     "purpose": "primary",
+                     "maxRowsBehavior": "noData",
+                     "maxRowsLookup": "scatter"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd167",
+         "businessItems": [
+            {
+               "name": "bi240",
+               "base": "bi188",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi241",
+               "@element": "SyntheticDataItem"
+            },
+            {
+               "name": "bi242",
+               "@element": "SyntheticDataItem"
+            },
+            {
+               "name": "bi243",
+               "base": "bi189",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd168",
+               "type": "procedural",
+               "proceduralQuery": {
+                  "@element": "ProceduralQuery",
+                  "type": "histogram",
+                  "arguments": [
+                     {
+                        "@element": "Argument",
+                        "purpose": "binType",
+                        "argumentValue": {
+                           "@element": "StringValue",
+                           "value": "defaultBinEdges"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "inputVariable",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi240"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "lowerBound",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi241"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "upperBound",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi242"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "aggregatedMeasure",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi243"
+                        }
+                     }
+                  ]
+               },
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd162",
+                     "purpose": "primary"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd217",
+         "businessItems": [
+            {
+               "name": "bi215",
+               "base": "bi181",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi214",
+               "base": "bi184",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi222",
+               "base": "bi185",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd218",
+               "type": "relational",
+               "relationalQueryList": [
+                  {
+                     "sortItems": [
+                        {
+                           "sortDirection": "ascending",
+                           "@element": "SortItem",
+                           "reference": "bi214"
+                        }
+                     ],
+                     "detail": true,
+                     "axes": [
+                        {
+                           "@element": "Query_Axis",
+                           "type": "column",
+                           "itemList": [
+                              "bi215",
+                              "bi222",
+                              "bi214"
+                           ]
+                        }
+                     ],
+                     "@element": "RelationalQuery"
+                  }
+               ],
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd213",
+                     "purpose": "primary",
+                     "maxRowsBehavior": "noData",
+                     "maxRowsLookup": "scatter"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd230",
+         "businessItems": [
+            {
+               "name": "bi229",
+               "base": "bi186",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi235",
+               "base": "bi185",
+               "@element": "RelationalDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd231",
+               "type": "relational",
+               "relationalQueryList": [
+                  {
+                     "detail": true,
+                     "axes": [
+                        {
+                           "@element": "Query_Axis",
+                           "type": "column",
+                           "itemList": [
+                              "bi235",
+                              "bi229"
+                           ]
+                        }
+                     ],
+                     "@element": "RelationalQuery"
+                  }
+               ],
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd227",
+                     "purpose": "primary",
+                     "maxRowsBehavior": "noData",
+                     "maxRowsLookup": "scatter"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      },
+      {
+         "@element": "ParentDataDefinition",
+         "name": "dd249",
+         "businessItems": [
+            {
+               "name": "bi248",
+               "base": "bi189",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi254",
+               "base": "bi185",
+               "@element": "RelationalDataItem"
+            },
+            {
+               "name": "bi255",
+               "@element": "SyntheticDataItem"
+            },
+            {
+               "name": "bi256",
+               "@element": "SyntheticDataItem"
+            }
+         ],
+         "source": "ds180",
+         "childQueryRelationshipType": "independent",
+         "dataDefinitionList": [
+            {
+               "@element": "DataDefinition",
+               "name": "dd250",
+               "type": "procedural",
+               "proceduralQuery": {
+                  "@element": "ProceduralQuery",
+                  "type": "histogram",
+                  "arguments": [
+                     {
+                        "@element": "Argument",
+                        "purpose": "binType",
+                        "argumentValue": {
+                           "@element": "StringValue",
+                           "value": "defaultBinEdges"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "aggregatedMeasure",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi248"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "inputVariable",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi254"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "lowerBound",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi255"
+                        }
+                     },
+                     {
+                        "@element": "Argument",
+                        "purpose": "upperBound",
+                        "argumentValue": {
+                           "@element": "ReferenceValue",
+                           "value": "bi256"
+                        }
+                     }
+                  ]
+               },
+               "source": "ds180",
+               "resultDefinitions": [
+                  {
+                     "@element": "ResultDefinition",
+                     "name": "dd244",
+                     "purpose": "primary"
+                  }
+               ]
+            }
+         ],
+         "status": "executable"
+      }
+   ],
+   "dataSources": [
+      {
+         "@element": "DataSource",
+         "name": "ds180",
+         "label": "_AUTOTUNE_DATASET_NAME_",
+         "type": "relational",
+         "casResource": {
+            "@element": "CasResource",
+            "server": "cas-shared-default",
+            "library": "_AUTOTUNE_CASLIB_NAME_",
+            "table": "_AUTOTUNE_DATASET_NAME_",
+            "locale": "en_US"
+         },
+         "businessItemFolder": {
+            "@element": "BusinessItemFolder",
+            "items": [
+               {
+                  "name": "bi181",
+                  "xref": "Evaluation",
+                  "@element": "DataItem"
+               },
+               {
+                  "name": "bi182",
+                  "xref": "EvalTime",
+                  "@element": "DataItem"
+               },
+               {
+                  "name": "bi183",
+                  "xref": "EvalType",
+                  "@element": "DataItem"
+               },
+               {
+                  "name": "bi184",
+                  "usage": "categorical",
+                  "xref": "Iteration",
+                  "@element": "DataItem"
+               },
+               {
+                  "name": "bi185",
+                  "xref": "_AUTOTUNE_PARM_3_",
+                  "@element": "DataItem"
+               },
+               {
+                  "name": "bi186",
+                  "xref": "_AUTOTUNE_OBJECTIVE_NAME_",
+                  "@element": "DataItem"
+               },
+               {
+                  "name": "bi187",
+                  "xref": "_AUTOTUNE_PARM_1_",
+                  "@element": "DataItem"
+               },
+               {
+                  "name": "bi188",
+                  "xref": "_AUTOTUNE_PARM_2_",
+                  "@element": "DataItem"
+               },
+               {
+                  "name": "bi189",
+                  "label": "Frequency",
+                  "usage": "quantitative",
+                  "format": "COMMA12.",
+                  "hidden": true,
+                  "@element": "DataSource_PredefinedDataItem",
+                  "calculation": "totalCount"
+               },
+               {
+                  "name": "bi190",
+                  "label": "Frequency Percent",
+                  "usage": "quantitative",
+                  "format": "PERCENT20.2",
+                  "hidden": true,
+                  "@element": "DataSource_PredefinedDataItem",
+                  "calculation": "totalCountPercent"
+               },
+               {
+                  "name": "bi191",
+                  "expression": {
+                     "@element": "Expression",
+                     "value": "gt(${bi181,raw},-1)"
+                  },
+                  "@element": "RelationalFilterItem"
+               }
+            ]
+         },
+         "appliedFilters": {
+            "@element": "AppliedFilters",
+            "dataSourceSubsetFilters": [
+               "bi191"
+            ]
+         }
+      }
+   ],
+   "visualElements": [
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve18",
+         "labelAttribute": "List table - Evaluation 1",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd21"
+         ],
+         "dataList": [
+            "dd19"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi193",
+                  "visible": true,
+                  "compactFormat": false
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi192",
+                  "visible": true
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi197",
+                  "visible": true,
+                  "compactFormat": false
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi198",
+                  "visible": true,
+                  "compactFormat": false
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi195",
+                  "visible": true,
+                  "compactFormat": false
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi196",
+                  "visible": true,
+                  "compactFormat": false
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi194",
+                  "visible": true,
+                  "compactFormat": false
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve29",
+         "labelAttribute": "Scatter - Evaluation 1",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "fitlineTransparency",
+               "value": "0"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd32"
+         ],
+         "dataList": [
+            "dd30"
+         ],
+         "@element": "Graph",
+         "graphType": "scatter",
+         "supplementalVisualList": [
+            "ve33"
+         ],
+         "gtml": "<StatGraph opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <Meta>\r\n        <DataNameMap>\r\n            <Entry model=\"ScatterPlot_253\" data=\"dd32\"/>\r\n        </DataNameMap>\r\n    </Meta>\r\n    <LayoutDataMatrix headerLabelAppearance=\"auto\">\r\n        <LayoutPrototypeOverlay2D>\r\n            <ScatterPlot name=\"ScatterPlot_253\" dataTransparency=\"0\" tipListPolicy=\"replace\" includeMissingGroup=\"true\" auxiliary=\"Role1 Role2 Role3\" tip=\"x y group\" x=\"dd32#bi199\" y=\"dd32#bi200\" group=\"dd32#bi201\">\r\n                <Roles>\r\n                    <Role name=\"Role1\" type=\"variable\">dd32#bi199</Role>\r\n                    <Role name=\"Role2\" type=\"variable\">dd32#bi200</Role>\r\n                    <Role name=\"Role3\" type=\"variable\">dd32#bi201</Role>\r\n                </Roles>\r\n                <MarkerAttrs size=\"7px\"/>\r\n            </ScatterPlot>\r\n            <XAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </XAxisOpts>\r\n            <YAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </YAxisOpts>\r\n        </LayoutPrototypeOverlay2D>\r\n    </LayoutDataMatrix>\r\n    <LayoutGlobalLegend hAlign=\"center\" vAlign=\"bottom\" position=\"bottom\" allowCollapsed=\"true\">\r\n        <AutoLegend opaque=\"false\" sortOrder=\"ascending\">\r\n            <GraphNames>\r\n                <Value>ScatterPlot_253</Value>\r\n            </GraphNames>\r\n        </AutoLegend>\r\n    </LayoutGlobalLegend>\r\n</StatGraph>\r\n"
+      },
+      {
+         "applyDynamicBrushes": "no",
+         "name": "ve38",
+         "labelAttribute": "Parallel coordinates plot - Number of Trees 1",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd52",
+            "dd53"
+         ],
+         "dataList": [
+            "dd39"
+         ],
+         "@element": "Graph",
+         "graphType": "pcPlot",
+         "supplementalVisualList": [
+            "ve55"
+         ],
+         "gtml": "<StatGraph opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <PadAttrs top=\"0px\" bottom=\"0px\" left=\"0px\" right=\"0px\"/>\r\n    <Meta>\r\n        <DataNameMap>\r\n            <Entry model=\"ParallelCoordinatesPlot_52\" data=\"dd52\"/>\r\n            <Entry model=\"BinMetadata_34\" data=\"dd53\"/>\r\n        </DataNameMap>\r\n    </Meta>\r\n    <LayoutRegion>\r\n        <ParallelCoordinatesPlot name=\"ParallelCoordinatesPlot_52\" dataTransparency=\"0.5\" smoothConnect=\"true\" lineWidthResponse=\"dd52#bi42\">\r\n            <BinMetadata name=\"BinMetadata_34\" dataField=\"dd53#bi45\" size=\"dd53#bi47\" start=\"dd53#bi46\" count=\"dd53#bi48\"/>\r\n            <Response>\r\n                <Value>dd52#bi205</Value>\r\n                <Value>dd52#bi206</Value>\r\n                <Value>dd52#bi203</Value>\r\n                <Value>dd52#bi202</Value>\r\n                <Value>dd52#bi204</Value>\r\n            </Response>\r\n            <ParallelAxisOpts>\r\n                <AxisOpts name=\"response1\"/>\r\n                <AxisOpts name=\"response2\"/>\r\n                <AxisOpts name=\"response3\"/>\r\n                <AxisOpts name=\"response4\"/>\r\n                <AxisOpts name=\"response5\"/>\r\n            </ParallelAxisOpts>\r\n        </ParallelCoordinatesPlot>\r\n    </LayoutRegion>\r\n</StatGraph>\r\n"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve55",
+         "resultDefinitionList": [
+            "dd52"
+         ],
+         "dataList": [
+            "dd39"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi205"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi206"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi203"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi202"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi204"
+               },
+               {
+                  "@element": "Table_ColumnSet",
+                  "variable": "bi42"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve61",
+         "labelAttribute": "Scatter - Evaluation 2",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "fitlineTransparency",
+               "value": "0"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd64"
+         ],
+         "dataList": [
+            "dd62"
+         ],
+         "@element": "Graph",
+         "graphType": "scatter",
+         "supplementalVisualList": [
+            "ve65"
+         ],
+         "gtml": "<StatGraph opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <Meta>\r\n        <DataNameMap>\r\n            <Entry model=\"ScatterPlot_266\" data=\"dd64\"/>\r\n        </DataNameMap>\r\n    </Meta>\r\n    <LayoutDataMatrix headerLabelAppearance=\"auto\">\r\n        <LayoutPrototypeOverlay2D>\r\n            <ScatterPlot name=\"ScatterPlot_266\" dataTransparency=\"0\" tipListPolicy=\"replace\" includeMissingGroup=\"true\" auxiliary=\"Role1 Role2 Role3\" tip=\"x y group\" x=\"dd64#bi207\" y=\"dd64#bi208\" group=\"dd64#bi209\">\r\n                <Roles>\r\n                    <Role name=\"Role1\" type=\"variable\">dd64#bi207</Role>\r\n                    <Role name=\"Role2\" type=\"variable\">dd64#bi208</Role>\r\n                    <Role name=\"Role3\" type=\"variable\">dd64#bi209</Role>\r\n                </Roles>\r\n                <MarkerAttrs size=\"7px\"/>\r\n            </ScatterPlot>\r\n            <XAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </XAxisOpts>\r\n            <YAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </YAxisOpts>\r\n        </LayoutPrototypeOverlay2D>\r\n    </LayoutDataMatrix>\r\n    <LayoutGlobalLegend hAlign=\"center\" vAlign=\"bottom\" position=\"bottom\" allowCollapsed=\"true\">\r\n        <AutoLegend opaque=\"false\" sortOrder=\"ascending\">\r\n            <GraphNames>\r\n                <Value>ScatterPlot_266</Value>\r\n            </GraphNames>\r\n        </AutoLegend>\r\n    </LayoutGlobalLegend>\r\n</StatGraph>\r\n"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve70",
+         "labelAttribute": "Scatter - Evaluation 5",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "fitlineTransparency",
+               "value": "0"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd73"
+         ],
+         "dataList": [
+            "dd71"
+         ],
+         "@element": "Graph",
+         "graphType": "scatter",
+         "supplementalVisualList": [
+            "ve74"
+         ],
+         "gtml": "<StatGraph opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <Meta>\r\n        <DataNameMap>\r\n            <Entry model=\"ScatterPlot_334\" data=\"dd73\"/>\r\n        </DataNameMap>\r\n    </Meta>\r\n    <LayoutDataMatrix headerLabelAppearance=\"auto\">\r\n        <LayoutPrototypeOverlay2D>\r\n            <ScatterPlot name=\"ScatterPlot_334\" dataTransparency=\"0\" tipListPolicy=\"replace\" includeMissingGroup=\"true\" auxiliary=\"Role1 Role2 Role3\" tip=\"x y group\" x=\"dd73#bi257\" y=\"dd73#bi258\" group=\"dd73#bi259\">\r\n                <Roles>\r\n                    <Role name=\"Role1\" type=\"variable\">dd73#bi257</Role>\r\n                    <Role name=\"Role2\" type=\"variable\">dd73#bi258</Role>\r\n                    <Role name=\"Role3\" type=\"variable\">dd73#bi259</Role>\r\n                </Roles>\r\n                <MarkerAttrs size=\"7px\"/>\r\n            </ScatterPlot>\r\n            <XAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </XAxisOpts>\r\n            <YAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </YAxisOpts>\r\n        </LayoutPrototypeOverlay2D>\r\n    </LayoutDataMatrix>\r\n    <LayoutGlobalLegend hAlign=\"center\" vAlign=\"bottom\" position=\"bottom\" allowCollapsed=\"true\">\r\n        <AutoLegend opaque=\"false\" sortOrder=\"ascending\">\r\n            <GraphNames>\r\n                <Value>ScatterPlot_334</Value>\r\n            </GraphNames>\r\n        </AutoLegend>\r\n    </LayoutGlobalLegend>\r\n</StatGraph>\r\n"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve84",
+         "labelAttribute": "Scatter - Number of Trees 1",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "fitlineTransparency",
+               "value": "0"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd87"
+         ],
+         "dataList": [
+            "dd85"
+         ],
+         "@element": "Graph",
+         "graphType": "scatter",
+         "supplementalVisualList": [
+            "ve88"
+         ],
+         "gtml": "<StatGraph opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <Meta>\r\n        <DataNameMap>\r\n            <Entry model=\"ScatterPlot_298\" data=\"dd87\"/>\r\n        </DataNameMap>\r\n    </Meta>\r\n    <LayoutDataMatrix headerLabelAppearance=\"auto\">\r\n        <LayoutPrototypeOverlay2D>\r\n            <ScatterPlot name=\"ScatterPlot_298\" dataTransparency=\"0\" tipListPolicy=\"replace\" includeMissingGroup=\"true\" auxiliary=\"Role1 Role2\" tip=\"x y\" x=\"dd87#bi223\" y=\"dd87#bi224\">\r\n                <Roles>\r\n                    <Role name=\"Role1\" type=\"variable\">dd87#bi223</Role>\r\n                    <Role name=\"Role2\" type=\"variable\">dd87#bi224</Role>\r\n                </Roles>\r\n                <MarkerAttrs size=\"7px\"/>\r\n            </ScatterPlot>\r\n            <XAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </XAxisOpts>\r\n            <YAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </YAxisOpts>\r\n        </LayoutPrototypeOverlay2D>\r\n    </LayoutDataMatrix>\r\n    <LayoutGlobalLegend hAlign=\"center\" vAlign=\"bottom\" position=\"bottom\" allowCollapsed=\"true\">\r\n        <AutoLegend opaque=\"false\">\r\n            <GraphNames>\r\n                <Value>ScatterPlot_298</Value>\r\n            </GraphNames>\r\n        </AutoLegend>\r\n    </LayoutGlobalLegend>\r\n</StatGraph>\r\n"
+      },
+      {
+         "applyDynamicBrushes": "no",
+         "name": "ve94",
+         "labelAttribute": "Histogram - Number of Trees 1",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "autoFrequencyQueryDataItemName",
+               "value": "bi239"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd97"
+         ],
+         "dataList": [
+            "dd95"
+         ],
+         "@element": "Graph",
+         "graphType": "histogram",
+         "supplementalVisualList": [
+            "ve98"
+         ],
+         "gtml": "<StatGraph border=\"false\" opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <PadAttrs top=\"0px\" bottom=\"0px\" left=\"0px\" right=\"0px\"/>\r\n    <Meta>\r\n        <DynVars>\r\n            <DynVar name=\"X\" description=\"HISTOGRAM_MEASURE\" required=\"true\" assignedType=\"numeric\" type=\"numeric\">\r\n                <DefaultValues>\r\n                    <Value>dd97.bi236</Value>\r\n                </DefaultValues>\r\n            </DynVar>\r\n            <DynVar name=\"Y\" description=\"HISTOGRAM_FREQUENCY\" required=\"true\" assignedType=\"numeric\" type=\"numeric\">\r\n                <DefaultValues>\r\n                    <Value>dd97.bi239</Value>\r\n                </DefaultValues>\r\n            </DynVar>\r\n            <DynVar name=\"TIP\" description=\"TIP_VAR\" required=\"false\" type=\"any\" multiplesAllowed=\"true\">\r\n                <DefaultValues>\r\n                    <Value>dd97.bi239</Value>\r\n                    <Value>dd97.bi237</Value>\r\n                    <Value>dd97.bi238</Value>\r\n                </DefaultValues>\r\n            </DynVar>\r\n            <DynVar name=\"HIDDEN\" description=\"HIDDEN_VAR\" required=\"false\" type=\"character\" multiplesAllowed=\"true\"/>\r\n        </DynVars>\r\n    </Meta>\r\n    <LayoutOverlay>\r\n        <HistogramParm name=\"HistogramParm\" tipListPolicy=\"replace\" _stmt=\"histogramparm\" xValues=\"leftpoints\" dataLabelFitPolicy=\"auto\" tip=\"TIP\" x=\"X\" y=\"Y\"/>\r\n        <XAxisOpts gridDisplay=\"off\">\r\n            <LinearOpts>\r\n                <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n            </LinearOpts>\r\n        </XAxisOpts>\r\n        <YAxisOpts>\r\n            <LinearOpts>\r\n                <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n            </LinearOpts>\r\n        </YAxisOpts>\r\n    </LayoutOverlay>\r\n</StatGraph>\r\n"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve138",
+         "labelAttribute": "Scatter - Evaluation 3",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "fitlineTransparency",
+               "value": "0"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd131"
+         ],
+         "dataList": [
+            "dd135"
+         ],
+         "@element": "Graph",
+         "graphType": "scatter",
+         "supplementalVisualList": [
+            "ve137"
+         ],
+         "gtml": "<StatGraph opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <Meta>\r\n        <DataNameMap>\r\n            <Entry model=\"ScatterPlot_278\" data=\"dd131\"/>\r\n        </DataNameMap>\r\n    </Meta>\r\n    <LayoutDataMatrix headerLabelAppearance=\"auto\">\r\n        <LayoutPrototypeOverlay2D>\r\n            <ScatterPlot name=\"ScatterPlot_278\" dataTransparency=\"0\" tipListPolicy=\"replace\" includeMissingGroup=\"true\" auxiliary=\"Role1 Role2 Role3\" tip=\"x y group\" x=\"dd131#bi210\" y=\"dd131#bi211\" group=\"dd131#bi212\">\r\n                <Roles>\r\n                    <Role name=\"Role1\" type=\"variable\">dd131#bi210</Role>\r\n                    <Role name=\"Role2\" type=\"variable\">dd131#bi211</Role>\r\n                    <Role name=\"Role3\" type=\"variable\">dd131#bi212</Role>\r\n                </Roles>\r\n                <MarkerAttrs size=\"7px\"/>\r\n            </ScatterPlot>\r\n            <XAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </XAxisOpts>\r\n            <YAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </YAxisOpts>\r\n        </LayoutPrototypeOverlay2D>\r\n    </LayoutDataMatrix>\r\n    <LayoutGlobalLegend hAlign=\"center\" vAlign=\"bottom\" position=\"bottom\" allowCollapsed=\"true\">\r\n        <AutoLegend opaque=\"false\" sortOrder=\"ascending\">\r\n            <GraphNames>\r\n                <Value>ScatterPlot_278</Value>\r\n            </GraphNames>\r\n        </AutoLegend>\r\n    </LayoutGlobalLegend>\r\n</StatGraph>\r\n"
+      },
+      {
+         "name": "ve141",
+         "labelAttribute": "Layout Container 1",
+         "selectionDisabled": "true",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "visualType",
+               "value": "LAYOUT_CONTAINER"
+            }
+         ],
+         "@element": "VisualContainer"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve151",
+         "labelAttribute": "Scatter - Number of Variables to Try 1",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "fitlineTransparency",
+               "value": "0"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd145"
+         ],
+         "dataList": [
+            "dd148"
+         ],
+         "@element": "Graph",
+         "graphType": "scatter",
+         "supplementalVisualList": [
+            "ve150"
+         ],
+         "gtml": "<StatGraph opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <Meta>\r\n        <DataNameMap>\r\n            <Entry model=\"ScatterPlot_305\" data=\"dd145\"/>\r\n        </DataNameMap>\r\n    </Meta>\r\n    <LayoutDataMatrix headerLabelAppearance=\"auto\">\r\n        <LayoutPrototypeOverlay2D>\r\n            <ScatterPlot name=\"ScatterPlot_305\" dataTransparency=\"0\" tipListPolicy=\"replace\" includeMissingGroup=\"true\" auxiliary=\"Role1 Role2\" tip=\"x y\" x=\"dd145#bi225\" y=\"dd145#bi226\">\r\n                <Roles>\r\n                    <Role name=\"Role1\" type=\"variable\">dd145#bi225</Role>\r\n                    <Role name=\"Role2\" type=\"variable\">dd145#bi226</Role>\r\n                </Roles>\r\n                <MarkerAttrs size=\"7px\"/>\r\n            </ScatterPlot>\r\n            <XAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </XAxisOpts>\r\n            <YAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </YAxisOpts>\r\n        </LayoutPrototypeOverlay2D>\r\n    </LayoutDataMatrix>\r\n    <LayoutGlobalLegend hAlign=\"center\" vAlign=\"bottom\" position=\"bottom\" allowCollapsed=\"true\">\r\n        <AutoLegend opaque=\"false\">\r\n            <GraphNames>\r\n                <Value>ScatterPlot_305</Value>\r\n            </GraphNames>\r\n        </AutoLegend>\r\n    </LayoutGlobalLegend>\r\n</StatGraph>\r\n"
+      },
+      {
+         "name": "ve154",
+         "labelAttribute": "Layout Container 2",
+         "selectionDisabled": "true",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "visualType",
+               "value": "LAYOUT_CONTAINER"
+            }
+         ],
+         "@element": "VisualContainer"
+      },
+      {
+         "applyDynamicBrushes": "no",
+         "name": "ve170",
+         "labelAttribute": "Histogram - Number of Variables to Try 1",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "autoFrequencyQueryDataItemName",
+               "value": "bi243"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd162"
+         ],
+         "dataList": [
+            "dd167"
+         ],
+         "@element": "Graph",
+         "graphType": "histogram",
+         "supplementalVisualList": [
+            "ve169"
+         ],
+         "gtml": "<StatGraph border=\"false\" opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <PadAttrs top=\"0px\" bottom=\"0px\" left=\"0px\" right=\"0px\"/>\r\n    <Meta>\r\n        <DynVars>\r\n            <DynVar name=\"X\" description=\"HISTOGRAM_MEASURE\" required=\"true\" assignedType=\"numeric\" type=\"numeric\">\r\n                <DefaultValues>\r\n                    <Value>dd162.bi240</Value>\r\n                </DefaultValues>\r\n            </DynVar>\r\n            <DynVar name=\"Y\" description=\"HISTOGRAM_FREQUENCY\" required=\"true\" assignedType=\"numeric\" type=\"numeric\">\r\n                <DefaultValues>\r\n                    <Value>dd162.bi243</Value>\r\n                </DefaultValues>\r\n            </DynVar>\r\n            <DynVar name=\"TIP\" description=\"TIP_VAR\" required=\"false\" type=\"any\" multiplesAllowed=\"true\">\r\n                <DefaultValues>\r\n                    <Value>dd162.bi243</Value>\r\n                    <Value>dd162.bi241</Value>\r\n                    <Value>dd162.bi242</Value>\r\n                </DefaultValues>\r\n            </DynVar>\r\n            <DynVar name=\"HIDDEN\" description=\"HIDDEN_VAR\" required=\"false\" type=\"character\" multiplesAllowed=\"true\"/>\r\n        </DynVars>\r\n    </Meta>\r\n    <LayoutOverlay>\r\n        <HistogramParm name=\"HistogramParm\" tipListPolicy=\"replace\" _stmt=\"histogramparm\" xValues=\"leftpoints\" dataLabelFitPolicy=\"auto\" tip=\"TIP\" x=\"X\" y=\"Y\"/>\r\n        <XAxisOpts gridDisplay=\"off\">\r\n            <LinearOpts>\r\n                <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n            </LinearOpts>\r\n        </XAxisOpts>\r\n        <YAxisOpts>\r\n            <LinearOpts>\r\n                <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n            </LinearOpts>\r\n        </YAxisOpts>\r\n    </LayoutOverlay>\r\n</StatGraph>\r\n"
+      },
+      {
+         "name": "ve173",
+         "labelAttribute": "Layout Container 3",
+         "selectionDisabled": "true",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "visualType",
+               "value": "LAYOUT_CONTAINER"
+            }
+         ],
+         "@element": "VisualContainer"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve33",
+         "resultDefinitionList": [
+            "dd32"
+         ],
+         "dataList": [
+            "dd30"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi199"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi200"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi201"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve65",
+         "resultDefinitionList": [
+            "dd64"
+         ],
+         "dataList": [
+            "dd62"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi207"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi208"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi209"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve137",
+         "resultDefinitionList": [
+            "dd131"
+         ],
+         "dataList": [
+            "dd135"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi210"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi211"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi212"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve220",
+         "labelAttribute": "Scatter - Evaluation 4",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "fitlineTransparency",
+               "value": "0"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd213"
+         ],
+         "dataList": [
+            "dd217"
+         ],
+         "@element": "Graph",
+         "graphType": "scatter",
+         "supplementalVisualList": [
+            "ve219"
+         ],
+         "gtml": "<StatGraph opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <Meta>\r\n        <DataNameMap>\r\n            <Entry model=\"ScatterPlot_291\" data=\"dd213\"/>\r\n        </DataNameMap>\r\n    </Meta>\r\n    <LayoutDataMatrix headerLabelAppearance=\"auto\">\r\n        <LayoutPrototypeOverlay2D>\r\n            <ScatterPlot name=\"ScatterPlot_291\" dataTransparency=\"0\" tipListPolicy=\"replace\" includeMissingGroup=\"true\" auxiliary=\"Role1 Role2 Role3\" tip=\"x group y\" x=\"dd213#bi215\" y=\"dd213#bi222\" group=\"dd213#bi214\">\r\n                <Roles>\r\n                    <Role name=\"Role1\" type=\"variable\">dd213#bi215</Role>\r\n                    <Role name=\"Role2\" type=\"variable\">dd213#bi214</Role>\r\n                    <Role name=\"Role3\" type=\"variable\">dd213#bi222</Role>\r\n                </Roles>\r\n                <MarkerAttrs size=\"7px\"/>\r\n            </ScatterPlot>\r\n            <XAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </XAxisOpts>\r\n            <YAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </YAxisOpts>\r\n        </LayoutPrototypeOverlay2D>\r\n    </LayoutDataMatrix>\r\n    <LayoutGlobalLegend hAlign=\"center\" vAlign=\"bottom\" position=\"bottom\" allowCollapsed=\"true\">\r\n        <AutoLegend opaque=\"false\" sortOrder=\"ascending\">\r\n            <GraphNames>\r\n                <Value>ScatterPlot_291</Value>\r\n            </GraphNames>\r\n        </AutoLegend>\r\n    </LayoutGlobalLegend>\r\n</StatGraph>\r\n"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve219",
+         "resultDefinitionList": [
+            "dd213"
+         ],
+         "dataList": [
+            "dd217"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi215"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi222"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi214"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve88",
+         "resultDefinitionList": [
+            "dd87"
+         ],
+         "dataList": [
+            "dd85"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi223"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi224"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve150",
+         "resultDefinitionList": [
+            "dd145"
+         ],
+         "dataList": [
+            "dd148"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi225"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi226"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve233",
+         "labelAttribute": "Scatter - Learning Rate 1",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "fitlineTransparency",
+               "value": "0"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd227"
+         ],
+         "dataList": [
+            "dd230"
+         ],
+         "@element": "Graph",
+         "graphType": "scatter",
+         "supplementalVisualList": [
+            "ve232"
+         ],
+         "gtml": "<StatGraph opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <Meta>\r\n        <DataNameMap>\r\n            <Entry model=\"ScatterPlot_318\" data=\"dd227\"/>\r\n        </DataNameMap>\r\n    </Meta>\r\n    <LayoutDataMatrix headerLabelAppearance=\"auto\">\r\n        <LayoutPrototypeOverlay2D>\r\n            <ScatterPlot name=\"ScatterPlot_318\" dataTransparency=\"0\" tipListPolicy=\"replace\" includeMissingGroup=\"true\" auxiliary=\"Role1 Role2\" tip=\"y x\" x=\"dd227#bi235\" y=\"dd227#bi229\">\r\n                <Roles>\r\n                    <Role name=\"Role1\" type=\"variable\">dd227#bi229</Role>\r\n                    <Role name=\"Role2\" type=\"variable\">dd227#bi235</Role>\r\n                </Roles>\r\n                <MarkerAttrs size=\"7px\"/>\r\n            </ScatterPlot>\r\n            <XAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </XAxisOpts>\r\n            <YAxisOpts>\r\n                <LinearOpts>\r\n                    <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n                </LinearOpts>\r\n            </YAxisOpts>\r\n        </LayoutPrototypeOverlay2D>\r\n    </LayoutDataMatrix>\r\n    <LayoutGlobalLegend hAlign=\"center\" vAlign=\"bottom\" position=\"bottom\" allowCollapsed=\"true\">\r\n        <AutoLegend opaque=\"false\">\r\n            <GraphNames>\r\n                <Value>ScatterPlot_318</Value>\r\n            </GraphNames>\r\n        </AutoLegend>\r\n    </LayoutGlobalLegend>\r\n</StatGraph>\r\n"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve232",
+         "resultDefinitionList": [
+            "dd227"
+         ],
+         "dataList": [
+            "dd230"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi235"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi229"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve98",
+         "resultDefinitionList": [
+            "dd97"
+         ],
+         "dataList": [
+            "dd95"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi237"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi238"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi239"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve169",
+         "resultDefinitionList": [
+            "dd162"
+         ],
+         "dataList": [
+            "dd167"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi241"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi242"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi243"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "no",
+         "name": "ve252",
+         "labelAttribute": "Histogram - Learning Rate 1",
+         "editorProperties": [
+            {
+               "@element": "Editor_Property",
+               "key": "isAutoLabel",
+               "value": "true"
+            },
+            {
+               "@element": "Editor_Property",
+               "key": "autoFrequencyQueryDataItemName",
+               "value": "bi248"
+            }
+         ],
+         "resultDefinitionList": [
+            "dd244"
+         ],
+         "dataList": [
+            "dd249"
+         ],
+         "@element": "Graph",
+         "graphType": "histogram",
+         "supplementalVisualList": [
+            "ve251"
+         ],
+         "gtml": "<StatGraph border=\"false\" opaque=\"false\" includeMissingDiscrete=\"true\" missingValueDisplay=\"autolabel\">\r\n    <PadAttrs top=\"0px\" bottom=\"0px\" left=\"0px\" right=\"0px\"/>\r\n    <Meta>\r\n        <DynVars>\r\n            <DynVar name=\"X\" description=\"HISTOGRAM_MEASURE\" required=\"true\" assignedType=\"numeric\" type=\"numeric\">\r\n                <DefaultValues>\r\n                    <Value>dd244.bi254</Value>\r\n                </DefaultValues>\r\n            </DynVar>\r\n            <DynVar name=\"Y\" description=\"HISTOGRAM_FREQUENCY\" required=\"true\" assignedType=\"any\" type=\"numeric\">\r\n                <DefaultValues>\r\n                    <Value>dd244.bi248</Value>\r\n                </DefaultValues>\r\n            </DynVar>\r\n            <DynVar name=\"TIP\" description=\"TIP_VAR\" required=\"false\" type=\"any\" multiplesAllowed=\"true\">\r\n                <DefaultValues>\r\n                    <Value>dd244.bi248</Value>\r\n                    <Value>dd244.bi255</Value>\r\n                    <Value>dd244.bi256</Value>\r\n                </DefaultValues>\r\n            </DynVar>\r\n            <DynVar name=\"HIDDEN\" description=\"HIDDEN_VAR\" required=\"false\" type=\"character\" multiplesAllowed=\"true\"/>\r\n        </DynVars>\r\n    </Meta>\r\n    <LayoutOverlay>\r\n        <HistogramParm name=\"HistogramParm\" tipListPolicy=\"replace\" _stmt=\"histogramparm\" xValues=\"leftpoints\" dataLabelFitPolicy=\"auto\" tip=\"TIP\" x=\"X\" y=\"Y\"/>\r\n        <XAxisOpts gridDisplay=\"off\">\r\n            <LinearOpts>\r\n                <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n            </LinearOpts>\r\n        </XAxisOpts>\r\n        <YAxisOpts>\r\n            <LinearOpts>\r\n                <TickValueFormatOpts maxWidth=\"2\" extractScale=\"true\"/>\r\n            </LinearOpts>\r\n        </YAxisOpts>\r\n    </LayoutOverlay>\r\n</StatGraph>\r\n"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve251",
+         "resultDefinitionList": [
+            "dd244"
+         ],
+         "dataList": [
+            "dd249"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi255"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi256"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi248"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      },
+      {
+         "applyDynamicBrushes": "yes",
+         "name": "ve74",
+         "resultDefinitionList": [
+            "dd73"
+         ],
+         "dataList": [
+            "dd71"
+         ],
+         "@element": "Table",
+         "columns": {
+            "@element": "Table_Columns",
+            "columns": [
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi257"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi258"
+               },
+               {
+                  "@element": "Table_Column",
+                  "variable": "bi259"
+               }
+            ]
+         },
+         "columnSizing": "autoFill"
+      }
+   ],
+   "view": {
+      "@element": "View",
+      "header": {
+         "mediaContainerList": [
+            {
+               "@element": "MediaContainer",
+               "target": "mt2",
+               "layout": {
+                  "@element": "ResponsiveLayout",
+                  "orientation": "horizontal",
+                  "overflow": "fit",
+                  "weights": [
+                     {
+                        "mediaTarget": "mt5",
+                        "@element": "Weights",
+                        "unit": "percent",
+                        "values": [
+                           {
+                              "@element": "Weight",
+                              "value": "100%"
+                           }
+                        ]
+                     },
+                     {
+                        "mediaTarget": "mt4",
+                        "@element": "Weights",
+                        "unit": "percent",
+                        "values": [
+                           {
+                              "@element": "Weight",
+                              "value": "100%"
+                           }
+                        ]
+                     },
+                     {
+                        "mediaTarget": "mt3",
+                        "@element": "Weights",
+                        "unit": "percent",
+                        "values": [
+                           {
+                              "@element": "Weight",
+                              "value": "100%"
+                           }
+                        ]
+                     }
+                  ]
+               }
+            }
+         ],
+         "@element": "Header"
+      },
+      "sections": [
+         {
+            "@element": "Section",
+            "name": "vi6",
+            "label": "Data",
+            "header": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "horizontal",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  }
+               ],
+               "@element": "Header"
+            },
+            "body": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "vertical",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     "containedElementList": [
+                        {
+                           "name": "vi17",
+                           "responsiveConstraint": {
+                              "@element": "ResponsiveConstraint",
+                              "widthConstraint": {
+                                 "@element": "Responsive_WidthConstraint",
+                                 "widths": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "ignore",
+                                       "flexibility": "flexible",
+                                       "@element": "Width"
+                                    }
+                                 ]
+                              },
+                              "heightConstraint": {
+                                 "@element": "Responsive_HeightConstraint",
+                                 "heights": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "ignore",
+                                       "flexibility": "flexible",
+                                       "@element": "Height"
+                                    }
+                                 ]
+                              }
+                           },
+                           "ref": "ve18",
+                           "@element": "Visual"
+                        }
+                     ]
+                  }
+               ],
+               "@element": "Body"
+            }
+         },
+         {
+            "@element": "Section",
+            "name": "vi27",
+            "label": "Objective History",
+            "header": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "horizontal",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  }
+               ],
+               "@element": "Header"
+            },
+            "body": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "vertical",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     "containedElementList": [
+                        {
+                           "name": "vi28",
+                           "responsiveConstraint": {
+                              "@element": "ResponsiveConstraint",
+                              "widthConstraint": {
+                                 "@element": "Responsive_WidthConstraint",
+                                 "widths": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "ignore",
+                                       "flexibility": "flexible",
+                                       "@element": "Width"
+                                    }
+                                 ]
+                              },
+                              "heightConstraint": {
+                                 "@element": "Responsive_HeightConstraint",
+                                 "heights": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "ignore",
+                                       "flexibility": "flexible",
+                                       "@element": "Height"
+                                    }
+                                 ]
+                              }
+                           },
+                           "ref": "ve29",
+                           "@element": "Visual"
+                        }
+                     ]
+                  }
+               ],
+               "@element": "Body"
+            }
+         },
+         {
+            "@element": "Section",
+            "name": "vi36",
+            "label": "Parallel Coordinates",
+            "header": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "horizontal",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  }
+               ],
+               "@element": "Header"
+            },
+            "body": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "vertical",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     "containedElementList": [
+                        {
+                           "name": "vi37",
+                           "responsiveConstraint": {
+                              "@element": "ResponsiveConstraint",
+                              "widthConstraint": {
+                                 "@element": "Responsive_WidthConstraint",
+                                 "widths": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "ignore",
+                                       "flexibility": "flexible",
+                                       "@element": "Width"
+                                    }
+                                 ]
+                              },
+                              "heightConstraint": {
+                                 "@element": "Responsive_HeightConstraint",
+                                 "heights": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "ignore",
+                                       "flexibility": "flexible",
+                                       "@element": "Height"
+                                    }
+                                 ]
+                              }
+                           },
+                           "ref": "ve38",
+                           "@element": "Visual"
+                        }
+                     ]
+                  }
+               ],
+               "@element": "Body"
+            }
+         },
+         {
+            "@element": "Section",
+            "name": "vi59",
+            "label": "Hyperparameters History",
+            "header": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "horizontal",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  }
+               ],
+               "@element": "Header"
+            },
+            "body": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "vertical",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     "containedElementList": [
+                        {
+                           "name": "vi140",
+                           "responsiveConstraint": {
+                              "@element": "ResponsiveConstraint",
+                              "widthConstraint": {
+                                 "@element": "Responsive_WidthConstraint",
+                                 "widths": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "honor",
+                                       "flexibility": "shrinkable",
+                                       "@element": "Width"
+                                    }
+                                 ]
+                              },
+                              "heightConstraint": {
+                                 "@element": "Responsive_HeightConstraint",
+                                 "heights": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "honor",
+                                       "flexibility": "shrinkable",
+                                       "@element": "Height"
+                                    }
+                                 ]
+                              }
+                           },
+                           "ref": "ve141",
+                           "@element": "Container",
+                           "containedElementList": [
+                              {
+                                 "name": "vi60",
+                                 "responsiveConstraint": {
+                                    "@element": "ResponsiveConstraint",
+                                    "widthConstraint": {
+                                       "@element": "Responsive_WidthConstraint",
+                                       "widths": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Width"
+                                          }
+                                       ]
+                                    },
+                                    "heightConstraint": {
+                                       "@element": "Responsive_HeightConstraint",
+                                       "heights": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Height"
+                                          }
+                                       ]
+                                    }
+                                 },
+                                 "ref": "ve61",
+                                 "@element": "Visual"
+                              },
+                              {
+                                 "name": "vi139",
+                                 "responsiveConstraint": {
+                                    "@element": "ResponsiveConstraint",
+                                    "widthConstraint": {
+                                       "@element": "Responsive_WidthConstraint",
+                                       "widths": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Width"
+                                          }
+                                       ]
+                                    },
+                                    "heightConstraint": {
+                                       "@element": "Responsive_HeightConstraint",
+                                       "heights": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Height"
+                                          }
+                                       ]
+                                    }
+                                 },
+                                 "ref": "ve138",
+                                 "@element": "Visual"
+                              },
+                              {
+                                 "name": "vi221",
+                                 "responsiveConstraint": {
+                                    "@element": "ResponsiveConstraint",
+                                    "widthConstraint": {
+                                       "@element": "Responsive_WidthConstraint",
+                                       "widths": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Width"
+                                          }
+                                       ]
+                                    },
+                                    "heightConstraint": {
+                                       "@element": "Responsive_HeightConstraint",
+                                       "heights": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Height"
+                                          }
+                                       ]
+                                    }
+                                 },
+                                 "ref": "ve220",
+                                 "@element": "Visual"
+                              }
+                           ],
+                           "layout": {
+                              "@element": "ResponsiveLayout",
+                              "orientation": "vertical",
+                              "overflow": "grow"
+                           }
+                        }
+                     ]
+                  }
+               ],
+               "@element": "Body"
+            }
+         },
+         {
+            "@element": "Section",
+            "name": "vi82",
+            "label": "Objective vs Hyperparameters",
+            "header": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "horizontal",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  }
+               ],
+               "@element": "Header"
+            },
+            "body": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "vertical",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     "containedElementList": [
+                        {
+                           "name": "vi153",
+                           "responsiveConstraint": {
+                              "@element": "ResponsiveConstraint",
+                              "widthConstraint": {
+                                 "@element": "Responsive_WidthConstraint",
+                                 "widths": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "honor",
+                                       "flexibility": "shrinkable",
+                                       "@element": "Width"
+                                    }
+                                 ]
+                              },
+                              "heightConstraint": {
+                                 "@element": "Responsive_HeightConstraint",
+                                 "heights": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "honor",
+                                       "flexibility": "shrinkable",
+                                       "@element": "Height"
+                                    }
+                                 ]
+                              }
+                           },
+                           "ref": "ve154",
+                           "@element": "Container",
+                           "containedElementList": [
+                              {
+                                 "name": "vi83",
+                                 "responsiveConstraint": {
+                                    "@element": "ResponsiveConstraint",
+                                    "widthConstraint": {
+                                       "@element": "Responsive_WidthConstraint",
+                                       "widths": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Width"
+                                          }
+                                       ]
+                                    },
+                                    "heightConstraint": {
+                                       "@element": "Responsive_HeightConstraint",
+                                       "heights": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Height"
+                                          }
+                                       ]
+                                    }
+                                 },
+                                 "ref": "ve84",
+                                 "@element": "Visual"
+                              },
+                              {
+                                 "name": "vi152",
+                                 "responsiveConstraint": {
+                                    "@element": "ResponsiveConstraint",
+                                    "widthConstraint": {
+                                       "@element": "Responsive_WidthConstraint",
+                                       "widths": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Width"
+                                          }
+                                       ]
+                                    },
+                                    "heightConstraint": {
+                                       "@element": "Responsive_HeightConstraint",
+                                       "heights": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Height"
+                                          }
+                                       ]
+                                    }
+                                 },
+                                 "ref": "ve151",
+                                 "@element": "Visual"
+                              },
+                              {
+                                 "name": "vi234",
+                                 "responsiveConstraint": {
+                                    "@element": "ResponsiveConstraint",
+                                    "widthConstraint": {
+                                       "@element": "Responsive_WidthConstraint",
+                                       "widths": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Width"
+                                          }
+                                       ]
+                                    },
+                                    "heightConstraint": {
+                                       "@element": "Responsive_HeightConstraint",
+                                       "heights": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "flexible",
+                                             "@element": "Height"
+                                          }
+                                       ]
+                                    }
+                                 },
+                                 "ref": "ve233",
+                                 "@element": "Visual"
+                              }
+                           ],
+                           "layout": {
+                              "@element": "ResponsiveLayout",
+                              "orientation": "vertical",
+                              "overflow": "grow"
+                           }
+                        }
+                     ]
+                  }
+               ],
+               "@element": "Body"
+            }
+         },
+         {
+            "@element": "Section",
+            "name": "vi92",
+            "label": "Hyperparmeters Distribution",
+            "header": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "horizontal",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  }
+               ],
+               "@element": "Header"
+            },
+            "body": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "vertical",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     "containedElementList": [
+                        {
+                           "name": "vi172",
+                           "responsiveConstraint": {
+                              "@element": "ResponsiveConstraint",
+                              "widthConstraint": {
+                                 "@element": "Responsive_WidthConstraint",
+                                 "widths": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "honor",
+                                       "flexibility": "shrinkable",
+                                       "@element": "Width"
+                                    }
+                                 ]
+                              },
+                              "heightConstraint": {
+                                 "@element": "Responsive_HeightConstraint",
+                                 "heights": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "honor",
+                                       "flexibility": "shrinkable",
+                                       "@element": "Height"
+                                    }
+                                 ]
+                              }
+                           },
+                           "ref": "ve173",
+                           "@element": "Container",
+                           "containedElementList": [
+                              {
+                                 "name": "vi93",
+                                 "responsiveConstraint": {
+                                    "@element": "ResponsiveConstraint",
+                                    "widthConstraint": {
+                                       "@element": "Responsive_WidthConstraint",
+                                       "widths": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "shrinkable",
+                                             "value": "100%",
+                                             "@element": "Width"
+                                          }
+                                       ]
+                                    },
+                                    "heightConstraint": {
+                                       "@element": "Responsive_HeightConstraint",
+                                       "heights": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "shrinkable",
+                                             "value": "50%",
+                                             "@element": "Height"
+                                          }
+                                       ]
+                                    }
+                                 },
+                                 "ref": "ve94",
+                                 "@element": "Visual"
+                              },
+                              {
+                                 "name": "vi171",
+                                 "responsiveConstraint": {
+                                    "@element": "ResponsiveConstraint",
+                                    "widthConstraint": {
+                                       "@element": "Responsive_WidthConstraint",
+                                       "widths": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "shrinkable",
+                                             "value": "100%",
+                                             "@element": "Width"
+                                          }
+                                       ]
+                                    },
+                                    "heightConstraint": {
+                                       "@element": "Responsive_HeightConstraint",
+                                       "heights": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "shrinkable",
+                                             "value": "50%",
+                                             "@element": "Height"
+                                          }
+                                       ]
+                                    }
+                                 },
+                                 "ref": "ve170",
+                                 "@element": "Visual"
+                              },
+                              {
+                                 "name": "vi253",
+                                 "responsiveConstraint": {
+                                    "@element": "ResponsiveConstraint",
+                                    "widthConstraint": {
+                                       "@element": "Responsive_WidthConstraint",
+                                       "widths": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "shrinkable",
+                                             "value": "100%",
+                                             "@element": "Width"
+                                          }
+                                       ]
+                                    },
+                                    "heightConstraint": {
+                                       "@element": "Responsive_HeightConstraint",
+                                       "heights": [
+                                          {
+                                             "mediaTarget": "mt3",
+                                             "preferredSizeBehavior": "ignore",
+                                             "flexibility": "shrinkable",
+                                             "value": "50%",
+                                             "@element": "Height"
+                                          }
+                                       ]
+                                    }
+                                 },
+                                 "ref": "ve252",
+                                 "@element": "Visual"
+                              }
+                           ],
+                           "layout": {
+                              "@element": "ResponsiveLayout",
+                              "orientation": "vertical",
+                              "overflow": "grow"
+                           }
+                        }
+                     ]
+                  }
+               ],
+               "@element": "Body"
+            }
+         },
+         {
+            "@element": "Section",
+            "name": "vi68",
+            "label": "Evaluation Time History",
+            "header": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "horizontal",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  }
+               ],
+               "@element": "Header"
+            },
+            "body": {
+               "mediaContainerList": [
+                  {
+                     "@element": "MediaContainer",
+                     "target": "mt2",
+                     "layout": {
+                        "@element": "ResponsiveLayout",
+                        "orientation": "vertical",
+                        "overflow": "fit",
+                        "weights": [
+                           {
+                              "mediaTarget": "mt5",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt4",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           },
+                           {
+                              "mediaTarget": "mt3",
+                              "@element": "Weights",
+                              "unit": "percent",
+                              "values": [
+                                 {
+                                    "@element": "Weight",
+                                    "value": "100%"
+                                 }
+                              ]
+                           }
+                        ]
+                     },
+                     "containedElementList": [
+                        {
+                           "name": "vi69",
+                           "responsiveConstraint": {
+                              "@element": "ResponsiveConstraint",
+                              "widthConstraint": {
+                                 "@element": "Responsive_WidthConstraint",
+                                 "widths": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "ignore",
+                                       "flexibility": "flexible",
+                                       "@element": "Width"
+                                    }
+                                 ]
+                              },
+                              "heightConstraint": {
+                                 "@element": "Responsive_HeightConstraint",
+                                 "heights": [
+                                    {
+                                       "mediaTarget": "mt3",
+                                       "preferredSizeBehavior": "ignore",
+                                       "flexibility": "flexible",
+                                       "@element": "Height"
+                                    }
+                                 ]
+                              }
+                           },
+                           "ref": "ve70",
+                           "@element": "Visual"
+                        }
+                     ]
+                  }
+               ],
+               "@element": "Body"
+            }
+         }
+      ]
+   },
+   "mediaSchemes": [
+      {
+         "@element": "MediaScheme",
+         "name": "ms1",
+         "baseStylesheetResource": {
+            "@element": "BaseStylesheetResource",
+            "theme": "opal"
+         },
+         "stylesheet": {
+            "styles": {},
+            "@element": "Stylesheet"
+         }
+      }
+   ],
+   "mediaTargets": [
+      {
+         "@element": "MediaTarget",
+         "name": "mt2",
+         "windowSize": "default",
+         "scheme": "ms1"
+      },
+      {
+         "@element": "MediaTarget",
+         "name": "mt3",
+         "windowSize": "small",
+         "scheme": "ms1"
+      },
+      {
+         "@element": "MediaTarget",
+         "name": "mt4",
+         "windowSize": "medium",
+         "scheme": "ms1"
+      },
+      {
+         "@element": "MediaTarget",
+         "name": "mt5",
+         "windowSize": "large",
+         "scheme": "ms1"
+      }
+   ],
+   "properties": [
+      {
+         "@element": "Property",
+         "key": "displayDataSource",
+         "value": "ds180"
+      }
+   ],
+   "exportProperties": [
+      {
+         "@element": "Export",
+         "destination": "pdf",
+         "exportPropertyList": [
+            {
+               "@element": "Export_Property",
+               "key": "showCoverPage",
+               "value": "true",
+               "content": ""
+            },
+            {
+               "@element": "Export_Property",
+               "key": "showPageNumbers",
+               "value": "true",
+               "content": ""
+            }
+         ]
+      }
+   ],
+   "history": {
+      "@element": "History",
+      "versions": [
+         {
+            "@element": "Version",
+            "versionKey": "4.2.4",
+            "lastDate": "2020-01-29T18:56:55Z"
+         }
+      ],
+      "editors": [
+         {
+            "@element": "Editor",
+            "revisions": [
+               {
+                  "@element": "Revision",
+                  "editorVersion": "8.5",
+                  "lastDate": "2020-01-29T19:08:20.204Z"
+               }
+            ],
+            "applicationName": "VA"
+         }
+      ]
+   },
+   "sasReportState": {
+      "@element": "SASReportState",
+      "view": {
+         "@element": "View_State",
+         "currentSection": "vi27"
+      },
+      "date": "2020-01-29T19:08:35.709Z"
+   }
+}
