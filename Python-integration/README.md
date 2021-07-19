@@ -8,6 +8,9 @@ SAS integrates with Python through various code libraries and tools that allow o
 
 * [The Python & Viya Workshop](https://github.com/sassoftware/sas-viya-machine-learning/blob/master/Python-integration/Python_Viya_Workshop.ipynb) notebook is a great place those new to Python or CAS. This notebook starts with an introduction to Pandas, moves to an introduction to CAS and SWAT, discussing running actions in CAS and accessing data in CAS, and ends by building analytical models.
 * [The Data Science Pilot Action Set](https://github.com/sassoftware/sas-viya-machine-learning/blob/master/Python-integration/The%20Data%20Science%20Pilot%20Action%20Set.ipynb) notebook discusses how to use the Data Science Pilot Action Set for automated machine learning. This notebook discusses the available actions around data set exploration, feature engineering and selection, and automated machine learning.
+* [The Viya 2020 Example](https://github.com/sassoftware/sas-viya-machine-learning/blob/master/Python-integration/Viya%202020%20Example.ipynb) notebook builds an automated machine learning model using SAS Data Science Pilot via the SWAT package and a Python model pipeline using xgboost and registers both models and metadata into model manager using the sasctl and pzmm package.
+
+
 
 ## Additional Resources for SAS Viya and Python Integration
 
