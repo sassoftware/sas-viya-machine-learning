@@ -1,0 +1,40 @@
+/* Dictionary for storing results */
+results = {};
+
+/* Tree Parameters */
+tree_parameters = {
+    table = "hmeq",
+    target="BAD",
+    inputs={
+        "CLAGE", "CLNO", "DEBTINC", "LOAN", "MORTDUE", "VALUE","YOJ", "DELINQ", "DEROG", "JOB", "NINQ"
+    },
+    nominals={"DELINQ", "DEROG", "JOB", "NINQ", "BAD"}
+};
+
+/* Create Sessions, store names in an array */
+sessions = {};
+do i = 1 to 2;
+    sessions = sessions + {create_parallel_session()};
+end;
+
+/* Train Forest Model in session 1 */
+decisionTree.forestTrain session = sessions[1] async = "FOREST" / tree_parameters;
+
+/* Train Gradboost Model in session 2 */
+decisionTree.gbtreeTrain session = sessions[2] async = "GBTREE" / tree_parameters;
+
+/* Wait for Actions to Complete */
+job = wait_for_next_action(0);
+do while(job);
+    results[job["job"]] = job["result"]; /* Store Results in Dictionary */
+    job = wait_for_next_action(0);
+end;
+
+/* End Sessions */
+do session over sessions;
+    term_parallel_session(session);
+end;
+
+/* Inspect Results */
+describe results;
+print results;

@@ -1,0 +1,213 @@
+function parallelShapTest(num_obs,num_sessions,num_workers);
+
+    /* Note: This version of the hmeq dataset has a unique column added, _dmIndex_ */
+    /* _dmIndex_ is used for brevity */
+
+    /* Dataset Information */
+    inputs = {"CLAGE", "CLNO", "DEBTINC", "LOAN", "MORTDUE", "VALUE","YOJ", "DELINQ", "DEROG", "JOB", "NINQ"};
+    nominals = {"DELINQ", "DEROG", "JOB", "NINQ"};
+
+    /* Drop ASTORE (if it's already present) */
+    table.dropTable result = drop_results status = drop_status / name = "hmeq_gradboost", quiet = True;
+
+    /* Train a Gradient Boosting Model Model */
+    decisionTree.gbtreeTrain result = gb_results status = gb_status /
+        table = "hmeq",
+        target = "BAD",
+        inputs = inputs,
+        nominals = nominals + {"BAD"},
+        savestate = {
+            name = "hmeq_gradboost",
+            promote = True /* Make available to subsessions */
+        }
+    ;
+
+    /* explainModel.shapleyExplainer parameters */
+    shap_parms = {
+        table = "hmeq",
+        inputs = inputs,
+        nominals = nominals,
+        predictedTarget = "P_BAD1",
+        modelTable = "hmeq_gradboost"
+    };
+
+    /* Shapley Call For Each Obersvation */
+    shapley_calls = {};
+    do i = 1 to num_obs;
+        shap_parm_copy = shap_parms;
+        shap_parm_copy["query"] = {
+            name = "hmeq",
+            where = "_dmIndex_ = " ||  (String) i
+        };
+        shapley_calls[i] = {"explainModel.shapleyExplainer",shap_parm_copy};
+    end;
+
+    /* Run all Shapley Calls */
+    start_time = datetime();
+    shapley_results = runParallelActions(shapley_calls,num_sessions,num_workers);
+
+    /* ... Process Shapley Values ... */
+
+    return datetime() - start_time;
+
+end;
+
+function pop(arr);
+    /*
+        pop() returns the first element from an array and removes that element from the array.
+        Arrays are passed by reference, so editing the `arr` argument will edit the array directly
+
+        Arguments:
+        1. arr (List) - list-like from which to pop value
+    */
+
+    /* Return Index */
+    ret = arr[1];
+
+    /* Modify Array */
+    if dim(arr) = 1 then arr = {};
+    else arr = arr[2:dim(arr)];
+
+    return ret;
+
+end;
+
+function callAction(action, parameters, async_session, async_tag);
+    /*
+        callAction() calls an action with the given parameters.
+        If async_tag is set to a string, the action is submitted asynchronously.
+
+        Arguments:
+        1. action (String), required - Name of action to call, including action set. i.e. "table.fetch"
+        2. parameters (Dictionary), required - Dictionary of action parameters.
+        3. async_session (String), optional - session for executing action.
+        4. async_tag (String), optional - Tag for submitted job
+    */
+
+    /* Submit Action Asychronously */
+    /* Default value function argument is 0, an int64. isString() checks if the argument was set to a string */
+    if isString(async_tag) then do;
+
+        execute(action || " session = async_session async = async_tag / parameters;");
+
+    /* Submit Action Synchronously */
+    end; else do;
+
+        if !isString(async_session) then async_session = "server";
+        execute(action || " session = async_session result = CA_RES status = CA_ST / parameters;");
+
+        /* Return Action Results and Status */
+        return(
+            {
+                result = CA_RES,
+                status = CA_ST
+            }
+        );
+
+    end;
+
+end;
+
+
+function runParallelActions(action_array, num_sessions, num_workers, init_string, batch_size);
+    /*
+        runParallelActions() executes an array of action calls in parallel and returns their results.
+        If num_sessions = 1, actions are executed sequentially.
+
+        Arguments:
+        1. action_array (Array) - array of action specifications to run. An action specification is a two-element array
+                                  where the first element is the action name and the second element is the action parameters
+        2. num_sessions (Int64) - number of sessions to use for action submission
+        3. num_workers (Int64) - number of workers to use for each session. 0 means all workers
+        4. init_string (String) - CASL code to run at the start of a session
+        5. batch_size (Int64) - number of actions to queue for a single session. 0 means queue all actions immediately.
+    */
+
+    /* Action Call Bookeeping */
+    action_results = {};
+    submitted_actions = {};
+
+    /* Process Batch Size */
+    max_batch = ceil(dim(action_array) / num_sessions);
+    if batch_size <= 0 or batch_size >  max_batch then batch_size = max_batch;
+
+    /* Start Parallel Sessions */
+    sessions = {};
+    do i = 1 to num_sessions;
+        sessions[i] = create_parallel_session(num_workers);
+        submitted_actions[sessions[i]] = 0;
+
+        /* Run Start-Up Script */
+        if isString(init_string) then callAction("sccasl.runCASL",{code = init_string},sessions[i]);
+    end;
+    available_sessions = sessions;
+
+    /* Big Loop */
+    still_working = True;
+    next_action = 1;
+    do while(still_working);
+
+        /* Default to Exiting Loop */
+        still_working = False;
+
+        /* Submit Remaining Actions */
+        if next_action <= dim(action_array) and dim(available_sessions) > 0 then do;
+
+            /* More Actions to submit, continue working */
+            still_working = True;
+
+            /* Grab Session */
+            session = pop(available_sessions);
+
+            /* Submit a Batch of Actions */
+            do action_index = 1 to batch_size;
+                if next_action <= dim(action_array) then do;
+
+                    /* Grab Action */
+                    action = action_array[next_action];
+                    next_action = next_action + 1;
+
+                    /* Submit Action */
+                    callAction(action[1], action[2], session, (String) (next_action - 1));
+                    submitted_actions[session] = submitted_actions[session] + 1;
+
+                end;
+            end;
+
+            /* Return to top of loop, prioritizing action submission */
+            continue;
+
+        end;
+
+        /* Gather Submitted Actions */
+        job = wait_for_next_action(sessions);
+        if job then do;
+
+            still_working = True;
+
+            /* Store Action Results */
+            session = job['session'];
+            action_number = (int64) job['job'];
+            action_results[action_number] = job;
+
+            /* Re-Use Session */
+            submitted_actions[session] = submitted_actions[session] - 1;
+            if submitted_actions[session] <= 0 then available_sessions = available_sessions + {session};
+
+        end;
+
+        /* Catch Unreturned Actions */
+        do session, count over submitted_actions;
+            if count > 0 then still_working = True;
+        end;
+
+    end;
+
+    /* End Parallel Sessions */
+    do session over sessions;
+        term_parallel_session(session);
+    end;
+
+    return action_results;
+
+end;
