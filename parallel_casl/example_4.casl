@@ -1,0 +1,23 @@
+/* REQUIRES: library.casl */
+
+results = newTable(
+    "parallel results",
+    {"NumberOfSessions","1Worker","2Worker","3Worker","4Worker","5Worker"},
+    {"double","double","double","double","double","double"}
+);
+
+do num_sessions over {1,2,3,4,5,10,20};
+    addRow(
+        results,
+        {
+            num_sessions,
+            parallelShapTest(100,num_sessions,1),
+            parallelShapTest(100,num_sessions,2),
+            parallelShapTest(100,num_sessions,3),
+            parallelShapTest(100,num_sessions,4),
+            parallelShapTest(100,num_sessions,5)
+        }
+    );
+end;
+
+print results;
