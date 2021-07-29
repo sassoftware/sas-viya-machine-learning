@@ -1,0 +1,53 @@
+/* Standard Action Call */
+action table.fetch result = fetch_result status = fetch_status / table = "hmeq";
+/*
+    1. "action" can be omitted
+*/
+
+/* Start a Parallel Session */
+parallel_session = create_parallel_session();
+/*
+    1. only available in server-side CASL
+    2. optional parameter: number-of-workers, default is all workers
+    3. return value is a string containing the session name for later use
+*/
+
+/* Promote HMEQ Table */
+action table.promote result = promote_result status = promote_status / quiet = True, name = "hmeq";
+/*
+    1. tables accessed by parallel sessions must be promoted or loaded into each session individually
+*/
+
+/* Call Action in a Parallel Session, Synchronously */
+action table.fetch session = parallel_session result = par_result status = par_status / table = "hmeq";
+/*
+    1. specifying the "session" parameter submits the action to the specified session
+    2. results/status return just like the action call from above
+*/
+
+/* Call Action in a Parallel Session, Asynchronously */
+action table.fetch session = parallel_session async = "FETCH" / table = "hmeq";
+/*
+    1. specifiyng the "async" parameter submits the action asynchronously
+    2. result/status are not returned immediately
+*/
+
+/* Wait for Job to Finish */
+job = wait_for_next_action(0);
+/*
+    1. wait_for_next_action() returns results/status of actions submitted asynchronosly to parallel sessions.
+    2. return is 0 when there are no more jobs
+    3. dictionary returned contains the following information (not an exhaustive list):
+        session: name of the session the action ran within
+        job: name of the job set with the async= action statement option
+        status: return status of action
+        result: results objects returned by action
+        log: array of messages produced by the action
+*/
+
+/* End the Parallel Session */
+term_parallel_session(parallel_session);
+/*
+    1. takes session name as an argument
+    2. clean up spawned sessions when work is complete
+*/

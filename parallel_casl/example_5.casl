@@ -1,0 +1,77 @@
+/* REQUIRES: library.casl */
+
+/* Note: This version of the hmeq dataset has a partition column added, _partInd_ */
+
+/* CASL Code for Assessing a Forest Model */
+source assess_code;
+
+    /* Train Forest Model */
+    decisionTree.forestTrain result = forest_result status = forest_status /
+        table = {
+            name = "hmeq",
+            where = "_partInd_ = 1"
+        },
+        target = "BAD",
+        inputs = {
+            "CLAGE", "CLNO", "DEBTINC", "LOAN", "MORTDUE", "VALUE","YOJ", "DELINQ", "DEROG", "JOB", "NINQ"
+        },
+        nominals = {"DELINQ", "DEROG", "JOB", "NINQ", "BAD"},
+        savestate = "hmeq_forest_astore",
+        encodeName = True,
+        nTree = n_trees
+    ;
+
+    /* Score Forest Model */
+    astore.score result = astore_result status = astore_status /
+        table = "hmeq",
+        rstore = "hmeq_forest_astore",
+        casout = "hmeq_astore_scored",
+        copyVars = {"BAD","_partInd_"}
+    ;
+
+    /* Assess Forest Model */
+    percentile.assess result = assess_result status = assess_status /
+        table = {
+            name = "hmeq_astore_scored",
+            where = "_partInd_ = 0"
+        },
+        response = "BAD",
+        inputs = "P_BAD1",
+        event = "1",
+        pVar = {"P_BAD0"},
+        pEvent = {"0"}
+    ;
+
+    /* Return Log Loss */
+    send_response(
+        {
+            MCLL = assess_result["FitStat"][1,"MCLL"]
+        }
+    );
+
+endsource;
+
+/* Create Forest Assess Calls */
+casl_calls = {};
+do n_trees over {50,100,150,200,250,500,1000,2000,5000};
+    casl_calls = casl_calls + {
+        {
+            "sccasl.runCasl",
+            {
+                code = assess_code,
+                vars = {n_trees = n_trees}
+            }
+        }
+    };
+end;
+
+/* Run all CASL Calls */
+casl_results = runParallelActions(casl_calls,dim(casl_calls),1);
+
+do action_index, result over casl_results;
+
+    print "nTrees: " casl_calls[action_index][2]["vars"]["n_trees"];
+    print "MCLL:   " result["result"]["MCLL"];
+    print " ";
+
+end;
